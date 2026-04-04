@@ -78,6 +78,7 @@ class HomePage extends StatelessWidget {
           'Pitchi is a music learning companion targeted at musical students who want extra pitch training support.',
       iconAsset: 'assets/icons/pitchi.png',
       accentColor: Color(0xFFE66D4E),
+      appStoreUrl: 'https://apps.apple.com/au/app/pitchi/id6499306008',
     ),
   ];
 
