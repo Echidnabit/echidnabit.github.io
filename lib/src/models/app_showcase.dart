@@ -6,6 +6,7 @@ class AppShowcase {
     required this.description,
     required this.iconAsset,
     required this.accentColor,
+    this.iconBackgroundColor,
     this.appStoreUrl,
   });
 
@@ -13,5 +14,6 @@ class AppShowcase {
   final String description;
   final String iconAsset;
   final Color accentColor;
+  final Color? iconBackgroundColor;
   final String? appStoreUrl;
 }

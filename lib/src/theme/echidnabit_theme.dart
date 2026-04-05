@@ -2,21 +2,25 @@ import 'package:flutter/widgets.dart';
 import 'package:forui/forui.dart';
 
 class EchidnabitTheme {
-  static const Color _brandBlue = Color(0xFF3454D1);
-  static const Color _softBlue = Color(0xFFEAF0FF);
-  static const Color _mist = Color(0xFFF7F8FC);
-  static const Color _mistForeground = Color(0xFF667085);
-  static const Color _border = Color(0xFFD8E0F2);
+  static const Color _brandBlue = Color(0xFF7AA2FF);
+  static const Color _midnight = Color(0xFF0A1020);
+  static const Color _surface = Color(0xFF10192F);
+  static const Color _surfaceElevated = Color(0xFF15223D);
+  static const Color _foreground = Color(0xFFF5F7FF);
+  static const Color _mutedForeground = Color(0xFF98A7CC);
+  static const Color _border = Color(0xFF243556);
 
-  static final FThemeData light = FThemes.blue.light.touch.copyWith(
-    colors: FThemes.blue.light.touch.colors.copyWith(
+  static final FThemeData dark = FThemes.blue.dark.touch.copyWith(
+    colors: FThemes.blue.dark.touch.colors.copyWith(
       primary: _brandBlue,
-      primaryForeground: const Color(0xFFFFFFFF),
-      secondary: _softBlue,
-      secondaryForeground: _brandBlue,
-      muted: _mist,
-      mutedForeground: _mistForeground,
-      card: const Color(0xFFFFFFFF),
+      primaryForeground: _midnight,
+      secondary: _surfaceElevated,
+      secondaryForeground: _foreground,
+      muted: _surface,
+      mutedForeground: _mutedForeground,
+      background: _midnight,
+      foreground: _foreground,
+      card: _surface,
       border: _border,
     ),
   );

@@ -10,12 +10,13 @@ class EchidnabitWebsiteApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = EchidnabitTheme.light;
+    final theme = EchidnabitTheme.dark;
 
     return MaterialApp(
       title: 'Echidnabit',
       debugShowCheckedModeBanner: false,
       theme: theme.toApproximateMaterialTheme(),
+      themeMode: ThemeMode.dark,
       localizationsDelegates: FLocalizations.localizationsDelegates,
       supportedLocales: FLocalizations.supportedLocales,
       initialRoute: initialRouteOverride ?? Uri.base.path,

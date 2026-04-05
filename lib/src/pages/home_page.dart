@@ -16,6 +16,7 @@ class HomePage extends StatelessWidget {
           'Tessellate lets artists split their pictures so creating repeatable tessellated art is quick and easy.',
       iconAsset: 'assets/icons/tessellate.png',
       accentColor: Color(0xFF4E79E6),
+      iconBackgroundColor: Color(0xFF31456C),
       appStoreUrl: 'https://apps.apple.com/us/app/tessellate/id6473245834',
     ),
     AppShowcase(
@@ -24,6 +25,7 @@ class HomePage extends StatelessWidget {
           'Pitchi is a music learning companion targeted at musical students who want extra pitch training support.',
       iconAsset: 'assets/icons/pitchi.png',
       accentColor: Color(0xFFE66D4E),
+      iconBackgroundColor: Color(0xFF212A50),
       appStoreUrl: 'https://apps.apple.com/au/app/pitchi/id6499306008',
     ),
   ];
@@ -263,6 +265,8 @@ class AppShowcaseCard extends StatelessWidget {
                 .min(availableWidth * iconFillRatio, isCompact ? 160.0 : 220.0)
                 .clamp(120.0, 220.0);
             final iconSize = targetSize * 0.88;
+            final iconBackgroundColor = app.iconBackgroundColor;
+            final iconRadius = BorderRadius.circular(targetSize * 0.2);
 
             return Column(
               mainAxisSize: MainAxisSize.min,
@@ -278,11 +282,18 @@ class AppShowcaseCard extends StatelessWidget {
                         borderRadius: BorderRadius.circular(targetSize * 0.24),
                       ),
                       child: Center(
-                        child: Image.asset(
-                          app.iconAsset,
+                        child: Container(
                           width: iconSize,
                           height: iconSize,
-                          fit: BoxFit.contain,
+                          decoration: BoxDecoration(
+                            color: iconBackgroundColor,
+                            borderRadius: iconRadius,
+                          ),
+                          clipBehavior: Clip.antiAlias,
+                          child: Image.asset(
+                            app.iconAsset,
+                            fit: BoxFit.contain,
+                          ),
                         ),
                       ),
                     ),
